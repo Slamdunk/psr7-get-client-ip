@@ -8,7 +8,7 @@
     "timeout": 10,
     "logs": {
         "stryker": {
-            "report": "main"
+            "report": "master"
         }
     },
     "mutators": {
