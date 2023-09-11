@@ -19,7 +19,7 @@ jobs:
           - "8.1"
 
     steps:
-      - uses: "actions/checkout@v3"
+      - uses: "actions/checkout@v4"
       - uses: "shivammathur/setup-php@v2"
         with:
           coverage: "none"
@@ -46,7 +46,7 @@ jobs:
             code-coverage: "pcov"
 
     steps:
-      - uses: "actions/checkout@v3"
+      - uses: "actions/checkout@v4"
       - uses: "shivammathur/setup-php@v2"
         with:
           coverage: "${{ matrix.code-coverage }}"
@@ -78,7 +78,7 @@ jobs:
           - "8.1"
 
     steps:
-      - uses: "actions/checkout@v3"
+      - uses: "actions/checkout@v4"
       - uses: "shivammathur/setup-php@v2"
         with:
           coverage: "none"
@@ -97,7 +97,7 @@ jobs:
           - "8.1"
 
     steps:
-      - uses: "actions/checkout@v3"
+      - uses: "actions/checkout@v4"
       - uses: "shivammathur/setup-php@v2"
         with:
           coverage: "none"
