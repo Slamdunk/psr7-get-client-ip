@@ -1,0 +1,7 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Method Slam\\Psr7GetClientIp\\Psr7GetClientIp\:\:forGoodList\(\) should return non\-empty\-string but returns mixed\.$#'
+			identifier: return.type
+			count: 1
+			path: lib/Psr7GetClientIp.php
