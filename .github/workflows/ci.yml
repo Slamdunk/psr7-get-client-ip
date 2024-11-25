@@ -68,7 +68,7 @@ jobs:
       - name: "Infection"
         if: ${{ matrix.code-coverage != 'none' }}
         timeout-minutes: 10
-        run: "make code-coverage PHP_BIN='php' INFECTION_ARGS='--logger-github'"
+        run: "vendor/bin/infection --threads=$(shell nproc) --skip-initial-tests --coverage=coverage --show-mutations --verbose --min-msi=100 --logger-github"
         env:
           STRYKER_DASHBOARD_API_KEY: ${{ secrets.STRYKER_DASHBOARD_API_KEY }}
 
