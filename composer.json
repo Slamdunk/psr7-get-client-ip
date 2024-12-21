@@ -18,7 +18,7 @@
         "laminas/laminas-diactoros": "^3.5.0",
         "phpstan/phpstan": "^2.0.4",
         "phpstan/phpstan-phpunit": "^2.0.3",
-        "phpunit/phpunit": "^11.5.1",
+        "phpunit/phpunit": "^11.5.2",
         "slam/php-cs-fixer-extensions": "^3.12.0"
     },
     "autoload": {
