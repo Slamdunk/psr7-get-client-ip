@@ -15,7 +15,7 @@
     },
     "require-dev": {
         "infection/infection": "^0.29.14",
-        "laminas/laminas-diactoros": "^3.5.0",
+        "laminas/laminas-diactoros": "^3.6.0",
         "phpstan/phpstan": "^2.1.14",
         "phpstan/phpstan-phpunit": "^2.0.6",
         "phpunit/phpunit": "^12.1.4",
