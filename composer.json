@@ -16,7 +16,7 @@
     "require-dev": {
         "infection/infection": "^0.29.14",
         "laminas/laminas-diactoros": "^3.6.0",
-        "phpstan/phpstan": "^2.1.14",
+        "phpstan/phpstan": "^2.1.15",
         "phpstan/phpstan-phpunit": "^2.0.6",
         "phpunit/phpunit": "^12.1.5",
         "slam/php-cs-fixer-extensions": "^3.12.0"
