@@ -46,15 +46,15 @@ final class Psr7GetClientIpTest extends TestCase
         ];
     }
 
-    /** @param non-empty-string $expected */
+    /** @param non-empty-string $source */
     #[DataProvider('provideIpv6Cases')]
-    public function testIpv6GoodList(string $expected): void
+    public function testIpv6GoodList(string $source, string $expected): void
     {
         $request = new ServerRequest([
-            'REMOTE_ADDR' => $expected,
+            'REMOTE_ADDR' => $source,
         ]);
 
-        self::assertSame($expected, (new Psr7GetClientIp())->forGoodList($request));
+        self::assertSame($source, (new Psr7GetClientIp())->forGoodList($request));
     }
 
     /**
