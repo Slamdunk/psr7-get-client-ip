@@ -36,7 +36,7 @@ final class Psr7GetClientIpTest extends TestCase
     }
 
     /** @return list<list<non-empty-string>> */
-    public static function provideIpv4Cases(): array
+    public static function provideIpv4Cases(): iterable
     {
         return [
             ['0.0.0.0'],
@@ -72,7 +72,7 @@ final class Psr7GetClientIpTest extends TestCase
     }
 
     /** @return list<list<non-empty-string>> */
-    public static function provideIpv6Cases(): array
+    public static function provideIpv6Cases(): iterable
     {
         return [
             ['2013:b0a7:5d31:fd03:7257:ae71:6cb9:8e1d', '2013:b0a7:5d31:fd03::/64'],
