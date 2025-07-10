@@ -1,7 +1,7 @@
 ifdef CI
 	DOCKER_PHP_EXEC :=
 else
-	DOCKER_PHP_EXEC := docker compose run --rm --env PHP_CS_FIXER_IGNORE_ENV=1 php
+	DOCKER_PHP_EXEC := docker compose run --rm php
 endif
 PHP_BIN=php -d zend.assertions=1
 
@@ -40,6 +40,7 @@ code-coverage: coverage/ok
 		vendor/bin/infection \
 		--threads=$(shell nproc) \
 		--skip-initial-tests \
+		--static-analysis-tool=phpstan \
 		--coverage=coverage \
 		--show-mutations \
 		--verbose \
