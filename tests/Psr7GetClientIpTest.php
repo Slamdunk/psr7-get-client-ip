@@ -18,10 +18,10 @@ final class Psr7GetClientIpTest extends TestCase
     public function testIpv4GoodList(string $expected): void
     {
         $request = new ServerRequest([
-            'REMOTE_ADDR' => $expected,
+            ($header = \uniqid()) => $expected,
         ]);
 
-        self::assertSame($expected, (new Psr7GetClientIp())->forGoodList($request));
+        self::assertSame($expected, (new Psr7GetClientIp($header))->forGoodList($request));
     }
 
     /** @param non-empty-string $expected */

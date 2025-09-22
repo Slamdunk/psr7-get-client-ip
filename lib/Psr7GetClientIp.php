@@ -6,12 +6,17 @@ namespace Slam\Psr7GetClientIp;
 
 use Psr\Http\Message\ServerRequestInterface;
 
-final class Psr7GetClientIp
+final readonly class Psr7GetClientIp
 {
+    /** @param non-empty-string $header */
+    public function __construct(
+        private string $header = 'REMOTE_ADDR',
+    ) {}
+
     /** @return non-empty-string */
     public function forGoodList(ServerRequestInterface $request): string
     {
-        return $request->getServerParams()['REMOTE_ADDR'];
+        return $request->getServerParams()[$this->header];
     }
 
     /** @return non-empty-string */
