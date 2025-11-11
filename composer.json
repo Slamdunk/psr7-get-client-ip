@@ -16,9 +16,9 @@
     "require-dev": {
         "infection/infection": "^0.31.9",
         "laminas/laminas-diactoros": "^3.8.0",
-        "phpstan/phpstan": "^2.1.31",
-        "phpstan/phpstan-phpunit": "^2.0.7",
-        "phpunit/phpunit": "^12.4.1",
+        "phpstan/phpstan": "^2.1.32",
+        "phpstan/phpstan-phpunit": "^2.0.8",
+        "phpunit/phpunit": "^12.4.2",
         "slam/php-cs-fixer-extensions": "^3.14.0"
     },
     "autoload": {
