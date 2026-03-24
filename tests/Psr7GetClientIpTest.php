@@ -21,7 +21,7 @@ final class Psr7GetClientIpTest extends TestCase
             ($header = \uniqid()) => $expected,
         ]);
 
-        self::assertSame($expected, (new Psr7GetClientIp($header))->forGoodList($request));
+        self::assertSame($expected, new Psr7GetClientIp($header)->forGoodList($request));
     }
 
     /** @param non-empty-string $expected */
@@ -32,7 +32,7 @@ final class Psr7GetClientIpTest extends TestCase
             'REMOTE_ADDR' => $expected,
         ]);
 
-        self::assertSame($expected, (new Psr7GetClientIp())->forNaughtyList($request));
+        self::assertSame($expected, new Psr7GetClientIp()->forNaughtyList($request));
     }
 
     /** @return list<list<non-empty-string>> */
@@ -54,7 +54,7 @@ final class Psr7GetClientIpTest extends TestCase
             'REMOTE_ADDR' => $source,
         ]);
 
-        self::assertSame($source, (new Psr7GetClientIp())->forGoodList($request));
+        self::assertSame($source, new Psr7GetClientIp()->forGoodList($request));
     }
 
     /**
@@ -68,7 +68,7 @@ final class Psr7GetClientIpTest extends TestCase
             'REMOTE_ADDR' => $source,
         ]);
 
-        self::assertSame($expected, (new Psr7GetClientIp())->forNaughtyList($request));
+        self::assertSame($expected, new Psr7GetClientIp()->forNaughtyList($request));
     }
 
     /** @return list<list<non-empty-string>> */
