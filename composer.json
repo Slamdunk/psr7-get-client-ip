@@ -14,7 +14,7 @@
         "psr/http-message": "^1.1 || ^2.0"
     },
     "require-dev": {
-        "infection/infection": "^0.34.0",
+        "infection/infection": "^0.34.1",
         "laminas/laminas-diactoros": "^3.8.0",
         "phpstan/phpstan": "^2.2.6",
         "phpstan/phpstan-phpunit": "^2.0.18",
